@@ -36,26 +36,22 @@
 (defmethod handle-key-event ((event (eql :up)) state)
   "Player movement upward"
   (when state
-    (incf (actor-y *player*))
-    (print-actor-info *player*)))
+    (incf (actor-y *player*))))
 
 (defmethod handle-key-event ((event (eql :down)) state)
   "Player movement downward"
   (when state
-    (incf (actor-y *player*) -1)
-    (print-actor-info *player*)))
+    (incf (actor-y *player*) -1)))
 
 (defmethod handle-key-event ((event (eql :left)) state)
   "Player movement to the left"
   (when state
-    (incf (actor-x *player*) -1)
-    (print-actor-info *player*)))
+    (incf (actor-x *player*) -1)))
 
 (defmethod handle-key-event ((event (eql :right)) state)
   "Player movement to the right"
   (when state
-    (incf (actor-x *player*))
-    (print-actor-info *player*)))
+    (incf (actor-x *player*))))
 
 (defmethod handle-key-event ((event (eql :inventory)) state)
   "When the player opens their inventory..."

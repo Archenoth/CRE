@@ -32,7 +32,12 @@
     :type list
     :initarg :inventory
     :initform (gensym)
-    :documentation "A place where all this actor's goodies are held."))
+    :documentation "A place where all this actor's goodies are held.")
+   (sprite
+    :accessor actor-sprite
+    :type surface
+    :initarg :sprite
+    :documentation "The sprite representing the player"))
   (:documentation "A 'thing with logic' in the game world"))
 
 (defclass player (actor)
